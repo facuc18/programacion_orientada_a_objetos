@@ -13,7 +13,7 @@ class ValidarLimiteCompra(Handler):
 
     def validar(self, pedido: Pedido) -> bool:
         if pedido.precio_final <= self.LIMITE:
-            print("[Chain] Validar Límite de Compra → OK")
+            print("Validar Límite de Compra → OK")
             return True
 
         pedido.motivo_rechazo = (
@@ -21,7 +21,7 @@ class ValidarLimiteCompra(Handler):
             f"${self.LIMITE:.2f}."
         )
         print(
-            "[Chain] Validar Límite de Compra → "
+            " Validar Límite de Compra → "
             f"ERROR: {pedido.motivo_rechazo}"
         )
         return False

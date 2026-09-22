@@ -6,9 +6,9 @@ class ValidarStock(Handler):
 
     def validar(self, pedido: Pedido) -> bool:
         if pedido.stock_disponible:
-            print("[Chain] Validar Stock → OK")
+            print(" Validar Stock → OK")
             return True
 
         pedido.motivo_rechazo = "Stock insuficiente."
-        print(f"[Chain] Validar Stock → ERROR: {pedido.motivo_rechazo}")
+        print(f"Validar Stock → ERROR: {pedido.motivo_rechazo}")
         return False
